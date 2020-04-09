@@ -8,7 +8,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/rickbdotcom/QuickScanner'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Richard Burgess' => 'rickb@rickb.com' }
   s.source           = { :git => 'https://github.com/rickbdotcom/QuickScanner', :tag => s.version.to_s }
 
