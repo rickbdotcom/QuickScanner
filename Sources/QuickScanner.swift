@@ -15,7 +15,7 @@ open class QuickScanner: NSObject {
         didSet { self.prepareCamera() }
     }
 
-	var zoomLevel: CGFloat = 1.0
+	open var zoomLevel: CGFloat = 1.0
 
     private let scannerQueue = DispatchQueue(label: "QuickScanner Queue")
     private let metadataScannerQueue = DispatchQueue(label: "Metadata QuickScanner Queue")
