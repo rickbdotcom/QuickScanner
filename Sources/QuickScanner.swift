@@ -15,6 +15,8 @@ open class QuickScanner: NSObject {
         didSet { self.prepareCamera() }
     }
 
+	var zoomLevel: CGFloat = 1.0
+
     private let scannerQueue = DispatchQueue(label: "QuickScanner Queue")
     private let metadataScannerQueue = DispatchQueue(label: "Metadata QuickScanner Queue")
 
@@ -139,6 +141,7 @@ open class QuickScanner: NSObject {
             if device.isLowLightBoostSupported == true {
                 device.automaticallyEnablesLowLightBoostWhenAvailable = true
             }
+            device.videoZoomFactor = zoomLevel
             device.unlockForConfiguration()
             captureDevice = device
 
