@@ -210,11 +210,12 @@ open class QuickScanner: NSObject {
         }
     }
 
-    open func stopCapturing() {
+    open func stopCapturing(completion: (() -> Void)? = nil) {
         scannerQueue.async {
             self.captureSession.stopRunning()
             DispatchQueue.main.async {
                 self.delegate?.quickScannerDidEndScanning(self)
+                completion?()
             }
         }
     }
